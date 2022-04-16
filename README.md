@@ -2,15 +2,16 @@
 GITHUB 
 Firstly, setup a remote repository in the github.
 Change the main branch as the ‘prod’
-Add a protection rule to this main branch by 
-Settings-Branches-Branch Protection Rules-Add Rule-Name-Enable the permissions as per need-Create.
+Add a protection rule to this main branch by Settings-Branches-Branch Protection Rules-Add Rule-Name-Enable the permissions as per need-Create.
 Create the other branches (dev and staging) as well.
 Code-select the branch-create a new branch.
-Configure the security scan for the repository using the Github Actions.
-Actions-Security-tfsec.
-Add the collaborators in the project by
-Settings-Collaborators-Add People.
-Commit the codes.
+Configure the security scan for the repository using the Github Actions Actions-Security-tfsec.
+Add the collaborators in the project by Settings-Collaborators-Add People.
+To work with the local repo, copy the ssh key pair to our repository Settings-SSH and GPG keys-Add New Key-Paste the Public key pair.
+Now in the AWS Cloud9 Environment, execute the following command:
+git remote add origin (our ssh link)
+To clone the contents of our repository to our C9
+git cone (ssh link)
 
 TERRAFORM 
 Create a S3 bucket in the AWS management console to store the terraform state. Upload the images to the S3 bucket for the static website as well.
